@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+           
+            <h2>Reserve Table</h2>
+            <p>Please fill the form below accurately to enable us serve you better.</p>
+            <table>
+                <form action="#" method="post">
+                    <tr>
+                        <td>Full Name:</td>
+                        <td>
+                            <input type="text" id="Last Name" required></td>
+                    </tr>
+                    <tr>
+                        <td> Email:</td>
+                        <td><input type="email" id="email" name="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Phone:</td>
+                        <td><input type="tel" id="phone" name="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td> Number of Guests:</td>
+                        <td><input type="number" id="guest" name="guest" required></td>
+                    </tr>
+                    <tr>
+                        <td> Reservation:</td>
+                        <td><input type="date" id="date" name="date" required>
+                            <input type="time"></td> </td>
+                    </tr>
+                    <tr>
+                        <td>  Reservation Type:</td>
+                        <td><select id="type" name="type" >
+                            <option>Please Select</option>
+                            <option>Dinner</option>
+                            <option>VIP</option>
+                            <option>Birthday/Anniversary</option>
+                            <option>Private</option>
+                            <option>Wedding</option>
+                            <option>Corporate</option>
+                            <option>Holiday</option>
+                        </select> </td>
+                    </tr>
+                        <td>Any Special Requests:</td>
+                        <td><textarea id="request" name="request" rows="4" cols="30"></textarea></td>
+                    </tr>
+                </form>
+            </table>
+            <br>
+                
+        
+               
+                <button type="submit">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

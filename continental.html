@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continental Dishes</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .column {
+        width: 45%;
+    }
+    h2, h3 {
+        text-align: center;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="column" id="chickenDishes">
+        <h2>Chicken Dishes</h2>
+        <table>
+            <tr>
+                <th>Dish</th>
+                <th>Price (USD)</th>
+            </tr>
+            
+        </table>
+    </div>
+    <div class="column" id="vegAndOthers">
+        <h2>Veg & Others</h2>
+        <table>
+            <tr>
+                <th>Dish</th>
+                <th>Price (USD)</th>
+            </tr>
+            
+        </table>
+    </div>
+</div>
+<div class="container">
+    <div class="column" id="pastaDishes">
+        <h2>Pasta Dishes</h2>
+        <table>
+            <tr>
+                <th>Dish</th>
+                <th>Price (USD)</th>
+            </tr>
+         
+        </table>
+    </div>
+    <div class="column" id="seafoodDishes">
+        <h2>Seafood Dishes</h2>
+        <table>
+            <tr>
+                <th>Dish</th>
+                <th>Price (USD)</th>
+            </tr>
+          
+        </table>
+    </div>
+</div>
+<div class="container">
+    <div class="column" id="starterDishes">
+        <h2>Starter Dishes (Veg)</h2>
+        <table>
+            <tr>
+                <th>Dish</th>
+                <th>Price (USD)</th>
+            </tr>
+            
+        </table>
+    </div>
+    <div class="column" id="saladDishes">
+        <h2>Salads</h2>
+        <table>
+            <tr>
+                <th>Dish</th>
+                <th>Price (USD)</th>
+            </tr>
+            
+        </table>
+    </div>
+</div>
+
+<script>
+   
+    const dishes = [
+       
+        ["Augratine Chicken", 398],
+        ["Baked Chicken Macaroni", 398],
+        ["Baked Spinach Mushroom & Chicken", 398],
+        ["BBQ", 372],
+        ["Butter Fried Chicken Breast Steak", 469],
+        ["Cajun Spice Marinated Chicken Breast", 469],
+        ["Cajun Spicey - Marinated Chicken Skewer's", 468.66],
+        ["Chicken Don Paul", 469],
+        ["Chicken Hawain", 379],
+        ["Chicken Lasagna Bolognese", 494],
+        ["Chicken Minced Southern Fried Steak", 468.66],
+        ["Chicken Stroganoff", 372],
+        ["Cream Of Chicken", 205],
+        ["Cream Of Chicken Soup", 218],
+        ["Grilled Chicken Steak", 455.82],
+        ["Indian Caeser Salad", 353],
+        ["Macroni Chicken Salad", 353.1],
+        ["Oregeno Marinated Chicken Skewer's", 449],
+        ["Oriental BBQ Chicken", 404.46],
+        ["Panko Fried Chicken Nuggets", 398],
+        ["Pepper Cleavage Steak", 469],
+        ["Peri Peri Marinated Chicken Skewer's", 456],
+        ["Smoky BBQ Leg", 417.30],
+        ["Spaghetti Bolognaise Chicken", 475.08],
+        ["Steak De Poulet (Cooked Tomato Sauce)", 482],
+        ["Steak Diana", 449],
+        ["Stuffed Cheese Chicken Steak", 533],
+        
+        ["Augratine Veg", 327],
+        ["Baked Cheese Macroni", 340],
+        ["Boiled Vegetable", 148],
+        ["Cajun Cottage Cheese", 398],
+        ["Classic Tomato Soup", 180],
+        ["Corn & Spinach", 321],
+        ["Cream of Brocolli", 193],
+        ["Cream Of Spinach", 193],
+        ["Cream of vegetable", 193],
+        ["Cream of Wild Mushroom", 192.6],
+        ["Garlic Bread", 108],
+        ["Gold Coin Paneer", 289],
+        ["Macroni Mix Fruit Salad", 338],
+        ["Mix Vegetable & Spinach", 295],
+        ["Mushroom & Spinach", 308.16],
+        ["Paneer Finger", 308],
+        ["Stuffed Mushroom Caps", 360],
+        ["Veg Cutlet (2 No)", 103],
+      
+        ["Fusilli Good Ol-Alfredo Chicken", 410],
+        ["Fusilli Good Ol-Alfredo Veg", 366],
+        ["Fusilli Indian Curry Sauce Chicken", 410],
+        ["Fusilli Indian Curry Sauce Veg", 385],
+        ["Fusilli Pesto Sauce Chicken", 410],
+        ["Fusilli Pesto Sauce Veg", 340],
+        ["Fusilli Pink Pasta Veg", 308],
+        ["Non Veg Aglio E Olio", 411],
+        ["Penne Good Ol-Alfredo Chicken", 384],
+        ["Penne Good Ol-Alfredo Veg", 342],
+        ["Penne Indian Curry Sauce Chicken", 385],
+        ["Penne Indian Curry Sauce Veg", 366],
+        ["Penne Pesto Sauce Chicken", 385],
+        ["Penne Pesto Sauce Veg", 340],
+        ["Penne Pink Pasta Veg", 308],
+        ["Penne Spiked Arrabiata Chicken", 410],
+        ["Penne Spiked Arrabiata Veg", 360],
+        ["Pink Pasta Chicken", 398.04],
+        ["Seafood Pasta With Tomato Sauces", 526],
+        ["Sizzler Service", 38.52],
+        ["Spaghetti Chicken Bolognese", 379],
+        ["Vegetable Aglio E Olio", 372],
+        
+        ["Basa Whole Fish Fillet's", 520],
+        ["Crum Fried Fish", 546],
+        ["Fish Finger", 430],
+        ["Grilled Fish With Lemon Butter Garlic Sauce", 629],
+        ["Grilled Prawn", 545.70],
+        ["King Butterfly Prawn's", 526.44],
+        ["Lemon Butter Chilli Prawn's", 475],
+        ["Peri Peri Grilled Cheese Prawn", 642],
+        ["Turki Prawn", 501],
+        ["Prawn Cutlet", 173],
+  
+        ["French Fries", 180],
+        ["Garlic Bread 2 Slices", 116],
+        ["Gold Coin Veg", 271],
+        ["Malai Broccoli", 333.84],
+        ["Mozzarella Cheese Finger", 327],
+        // Salads
+        ["Sweet Corn Chicken Salad", 218],
+        ["Delicious Egg Salad", 205],
+        ["Asiana Salad", 205.44],
+        ["Cucumber Salad", 205.44],
+        ["Fresh Garden Salad With Lemon", 186],
+        ["Green Salad", 160.5],
+        ["Macroni Fruit Salad", 205.44],
+        ["Onion Salad", 102.72],
+        ["Tossed Salad", 205]
+    ];
+
+    function populateTable(dishes, parentId) {
+        const parent = document.getElementById(parentId);
+        const table = parent.querySelector('table');
+        const tbody = table.querySelector('tbody');
+
+        dishes.forEach(dish => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${dish[0]}</td>
+                <td>${dish[1]}</td>
+            `;
+            tbody.appendChild(row);
+        });
+    }
+
+    
+    populateTable(dishes.filter(dish => dish[0].includes('Chicken')), 'chickenDishes');
+    populateTable(dishes.filter(dish => !dish[0].includes('Chicken')), 'vegAndOthers');
+    populateTable(dishes.filter(dish => dish[0].includes('Pasta')), 'pastaDishes');
+    populateTable(dishes.filter(dish => dish[0].includes('Seafood')), 'seafoodDishes');
+    populateTable(dishes.filter(dish => dish[0].includes('Starter')), 'starterDishes');
+    populateTable(dishes.filter(dish => dish[0].includes('Salad')), 'saladDishes');
+</script>
+</body>
+</html>
